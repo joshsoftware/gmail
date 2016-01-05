@@ -118,7 +118,7 @@ describe Gmail::Client::XOAuth2 do
       end).to_not raise_error
     end
 
-    it "raises error when mail can't be delivered and errors are disabled" do
+    it "raises error when mail can't be delivered and errors are enabled" do
       expect(-> do
         client = mock_client
         client.deliver!(Mail.new {})
